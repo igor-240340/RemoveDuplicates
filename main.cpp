@@ -2,9 +2,8 @@
 
 int main()
 {
-    int s = 23; //
-    //char data[] = "AAA BBB AAA";
-    char data[] = "AAA BBB AAA cc def ddd"; // A B A c def d
+    char data[] = "AAA BBB AAA";
+    int s = sizeof(data) / sizeof(data[0]);
 
     int i = 1;
     char* p = data + 1;
@@ -12,9 +11,8 @@ int main()
         char prev = *(p - 1);
         char cur = *p;
 
-        if (cur == prev) {
+        if (cur == prev)
             memcpy(p - 1, p, s - i);
-        }
         else
             p++;
 
