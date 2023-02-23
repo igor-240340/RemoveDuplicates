@@ -3,6 +3,9 @@
 static void RemoveDups(char* s);
 
 int main() {
+    //char data[] = ""
+    //char data[] = "z";
+    //char data[] = "zz";
     char data[] = "AAA BBB AAA";
 
     RemoveDups(data);
@@ -12,7 +15,11 @@ int main() {
 }
 
 void RemoveDups(char* str) {
-    int arraySize = strlen(str) + 1;
+    int strLen = strlen(str);
+    if (strLen < 2)             // Для наличия дубликатов строка должна быть как минимум длины 2.
+        return;
+
+    int arraySize = strLen + 1;
 
     // Встаем сразу на второй символ.
     int currentIndex = 1;
