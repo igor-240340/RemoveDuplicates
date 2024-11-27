@@ -1,2 +1,2 @@
 # RemoveDuplicates
-Removes successively duplicate characters from an array.
+Test assignment on removing successively duplicate characters from an array.
